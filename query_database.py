@@ -14,19 +14,19 @@ class QueryDataBase(Prompttemplate):
         super().__init__()
         current_dir = os.path.dirname(__file__)
         self.CHROMA_PATH = os.path.join(current_dir, 'data', 'CHROMA_PATH0(local)')
-        #self.CHROMA_PATH1 = os.path.join(current_dir, 'Database', 'CHROMA_PATH0(local)')
+        self.CHROMA_PATH1 = os.path.join(current_dir, 'data', 'CHROMA_PATH0(local)')
         self.CHROMA_PATH2 = os.path.join(current_dir, 'data', 'CHROMA_PATH2(personal)')
         self.CHROMA_PATH3 = os.path.join(current_dir,'data','CHROMA_PATH3(books)')
         self.CHROMA_PATH4 = os.path.join(current_dir, 'data', 'CHROMA_PATH4(research_papers)')
         self.CHROMA_PATH5 = os.path.join(current_dir,'data','CHROMA_PATH5(assistant_info)')
 
-    def get_retriever(self, CHROMA_PATH : str):
+    def get_retriever(self, chroma_path : str):
 
         try:
 
             embedding_function = OpenAIEmbeddings()
 
-            db = Chroma(persist_directory=CHROMA_PATH,embedding_function=embedding_function)
+            db = Chroma(persist_directory=chroma_path,embedding_function=embedding_function)
 
             retriever = db.as_retriever()
 
@@ -102,13 +102,13 @@ class QueryDataBase(Prompttemplate):
  #test purposes       
 """
 qd = QueryDataBase()
-
-chain = qd.retriever_chain("local")
-
+current_dir = os.path.dirname(__file__)
+path = os.path.join(current_dir,"data",'CHROMA_PATH5(assistant_info)')
+retriever = qd.get_retriever(chroma_path=path)
 query = "what is your name?"
 
-response = chain.invoke(query)
+response = retriever.invoke(query)
 
-print(response['answer'])
+print(response)"""
 
-  """      
+     
