@@ -13,12 +13,12 @@ class QueryDataBase(Prompttemplate):
     def __init__(self):
         super().__init__()
         current_dir = os.path.dirname(__file__)
-        self.CHROMA_PATH = os.path.join(current_dir, 'Database', 'CHROMA_PATH0(local)')
-        self.CHROMA_PATH1 = os.path.join(current_dir, 'Database', 'CHROMA_PATH1(medical)')
-        self.CHROMA_PATH2 = os.path.join(current_dir, 'Database', 'CHROMA_PATH2(personal)')
-        self.CHROMA_PATH3 = os.path.join(current_dir,'Database','CHROMA_PATH3(books)')
-        self.CHROMA_PATH4 = os.path.join(current_dir, 'Database', 'CHROMA_PATH4(research_papers)')
-        self.CHROMA_PATH5 = os.path.join(current_dir,'Database','CHROMA_PATH5(assistant_info)')
+        self.CHROMA_PATH = os.path.join(current_dir, 'data', 'CHROMA_PATH0(local)')
+        #self.CHROMA_PATH1 = os.path.join(current_dir, 'Database', 'CHROMA_PATH0(local)')
+        self.CHROMA_PATH2 = os.path.join(current_dir, 'data', 'CHROMA_PATH2(personal)')
+        self.CHROMA_PATH3 = os.path.join(current_dir,'data','CHROMA_PATH3(books)')
+        self.CHROMA_PATH4 = os.path.join(current_dir, 'data', 'CHROMA_PATH4(research_papers)')
+        self.CHROMA_PATH5 = os.path.join(current_dir,'data','CHROMA_PATH5(assistant_info)')
 
     def get_retriever(self, CHROMA_PATH : str):
 
@@ -54,7 +54,7 @@ class QueryDataBase(Prompttemplate):
 
             local_path =  self.CHROMA_PATH
 
-            medical_docs_path = self.CHROMA_PATH1
+            medical_docs_path = self.CHROMA_PATH
 
             personal_docs_path = self.CHROMA_PATH2
 

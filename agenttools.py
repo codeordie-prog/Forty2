@@ -16,7 +16,7 @@ class AgentTools(QueryDataBase):
 
         try:
 
-            chroma_path = self.CHROMA_PATH1
+            chroma_path = self.CHROMA_PATH
             if os.path.exists(chroma_path):
                 retriever = self.get_retriever(chroma_path)
 
