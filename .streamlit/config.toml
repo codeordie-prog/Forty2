@@ -1,0 +1,14 @@
+[theme]
+base = "dark"  # Start with the built-in dark theme as a base
+
+# Customize colors for a black theme
+backgroundColor = "#222222"
+textColor = "#DDDDDD"
+mainBackgroundColor = "#1F1F1F"  # Background for elements like cards
+secondaryBackgroundColor = "#333333"  # Alternative background color
+foregroundColor = "#DDDDDD"  # Color for borders and outlines
+primaryColor = "#38AECC"  # Primary accent color
+strokeColor = "#DDDDDD"  # Color for strokes and separators
+
+# Optional: Customize fonts (example using 'Roboto')
+# font = "Roboto"
