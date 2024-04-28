@@ -165,16 +165,16 @@ class CreateDataBase:
 
 
 #to do list - 1. handle directory path error
-"""
+'''
 def main():
 
     cd = CreateDataBase()
-    chroma_path =r"C:\Users\LENOVO\Documents\ROYF\Database\CHROMA_PATH3(books)"
-    directory_path = r"C:\Users\LENOVO\Documents\Databases1\Textbook"
+    chroma_path =r"C:\Users\LENOVO\Documents\forty2\data\CHROMA_PATH5(assistant_info)"
+    directory_path = r"C:\Users\LENOVO\Documents\test\aiinfo"
     cd.generate_data_store(directory_path,chroma_path)
 
 if __name__ == "__main__":
-    main()"""
+    main()'''
 
 
 
