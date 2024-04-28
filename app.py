@@ -7,14 +7,7 @@ class App(ParallelProcessing):
 
     def __init__(self):
         super().__init__()
-        self.chat_list = []
-
-
-    def chatlist(self, response:str)->list:
-
-        history = self.chat_list.append[response]
-
-        return history
+        
 
         
 
@@ -24,7 +17,6 @@ class App(ParallelProcessing):
 
         response = agent_executor.invoke({"input":query})
 
-        self.chatlist(response)
 
         return response['output']
         
@@ -72,5 +64,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 
