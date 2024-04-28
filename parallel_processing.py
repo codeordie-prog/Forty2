@@ -1,6 +1,6 @@
 from agent_executor import Agent_Executor
 import threading
-import queue
+import queue,os
 import streamlit as st
 
 
@@ -8,6 +8,13 @@ class ParallelProcessing(Agent_Executor):
 
     def __init__(self):
         super().__init__()
+        current_dir = os.path.dirname(__file__)
+        self.CHROMA_PATH = os.path.join(current_dir, 'data', 'CHROMA_PATH0(local)')
+        self.CHROMA_PATH1 = os.path.join(current_dir, 'data', 'CHROMA_PATH0(local)')
+        self.CHROMA_PATH2 = os.path.join(current_dir, 'data', 'CHROMA_PATH2(personal)')
+        self.CHROMA_PATH3 = os.path.join(current_dir,'data','CHROMA_PATH3(books)')
+        self.CHROMA_PATH4 = os.path.join(current_dir, 'data', 'CHROMA_PATH4(research_papers)')
+        self.CHROMA_PATH5 = os.path.join(current_dir,'data','CHROMA_PATH5(assistant_info)')
 
     # Define args
     def set_args(self, query: str) -> tuple:
