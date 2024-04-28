@@ -15,9 +15,9 @@ class ParallelProcessing(Agent_Executor):
         return args
     
     #just for the master agent
-    def master_response(self,query:str)->str:
+    def master_response(self,query:str,openai_api_key:str)->str:
 
-        executor = self.create_agent_executor("master")
+        executor = self.create_agent_executor("master",openai_api_key=openai_api_key)
         response = executor.invoke({"input":query})
         return response['output']
     
