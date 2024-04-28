@@ -48,7 +48,8 @@ class Agent_Executor(Agents):
 """
 ae = Agent_Executor()
 
-exec = ae.create_agent_executor("master")
+
+exec = ae.create_agent_executor("master",openai_api_key=key)
 
 chathistory = []
 
