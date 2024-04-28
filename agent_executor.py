@@ -34,11 +34,11 @@ class Agent_Executor(Agents):
         return agent
 
     #create the agent executor
-    def create_agent_executor(self, agent_type:str):
+    def create_agent_executor(self, agent_type:str, openai_api_key:str):
         
         tools = self.get_tools()
 
-        agent = self.create_agent(llm = ChatOpenAI(),agent=agent_type)
+        agent = self.create_agent(llm = ChatOpenAI(api_key=openai_api_key),agent=agent_type)
 
         agent_executor = AgentExecutor(agent = agent, tools = tools, verbose = True)
 
