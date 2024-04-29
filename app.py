@@ -44,8 +44,6 @@ def main():
                 f.write(response + "\n")
         st.write("Responses saved successfully!")
 
-
-
     # Button to submit the query and process the responses
     if st.button("Submit Query"):
         # Process the query and get the responses from the master agent

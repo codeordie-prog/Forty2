@@ -10,12 +10,12 @@ class AgentTools(QueryDataBase):
     def __init__(self):
         super().__init__()
         current_dir = os.path.dirname(__file__)
-        self.CHROMA_PATH = os.path.join(current_dir, 'data', 'CHROMA_PATH0(local)')
-        self.CHROMA_PATH1 = os.path.join(current_dir, 'data', 'CHROMA_PATH0(local)') #fix this
-        self.CHROMA_PATH2 = os.path.join(current_dir, 'data', 'CHROMA_PATH2(personal)')
-        self.CHROMA_PATH3 = os.path.join(current_dir,'data','CHROMA_PATH3(books)')
-        self.CHROMA_PATH4 = os.path.join(current_dir, 'data', 'CHROMA_PATH4(research_papers)')
-        self.CHROMA_PATH5 = os.path.join(current_dir,'data','CHROMA_PATH5(assistant_info)')
+        self.CHROMA_PATH = os.path.join(current_dir, './data/', 'CHROMA_PATH0(local)')
+        self.CHROMA_PATH1 = os.path.join(current_dir, './data/', 'CHROMA_PATH0(local)') #fix this
+        self.CHROMA_PATH2 = os.path.join(current_dir, './data/', 'CHROMA_PATH2(personal)')
+        self.CHROMA_PATH3 = os.path.join(current_dir,'./data/','CHROMA_PATH3(books)')
+        self.CHROMA_PATH4 = os.path.join(current_dir, './data/', 'CHROMA_PATH4(research_papers)')
+        self.CHROMA_PATH5 = os.path.join(current_dir,'./data/','CHROMA_PATH5(assistant_info)')
 
     
     
@@ -148,7 +148,10 @@ class AgentTools(QueryDataBase):
 
             print("An error occured, fix the path to source info about the AI assistant")
 
+    #tool7
+    def retreiver_tool(self):
 
+        retrieve = create_retriever_tool()
     
     #get study mate tools
 
